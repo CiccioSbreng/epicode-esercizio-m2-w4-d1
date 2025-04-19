@@ -1,0 +1,110 @@
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin: 0;
+     padding: 0;
+ }
+
+ #main {
+     min-height: 100vh;
+     background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXUlMjB3aGl0ZXxlbnwwfHx8fDE2ODQ5NTY1NzE&ixlib=rb-4.0.3&q=80&w=1080');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+ }
+
+ #topbar {
+     width: 100%;
+     height: 85px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ img {
+     height: 86px;
+     width: 146px;
+     cursor: pointer;
+     transition: transform 0.3s ease;
+ }
+
+ #content {
+     padding: 30px;
+     border-radius: 20px;
+     box-shadow: 0 10px 25px rgba(126, 84, 0, 0.2);
+     margin-top: 50px;
+     width: 90%;
+     max-width: 500px;
+     text-align: center;
+ }
+
+ h2,
+ h3 {
+     margin-bottom: 20px;
+     color: #222;
+ }
+
+ h3 {
+     font-size: 18px;
+     color: #b26b09;
+ }
+
+ input[type="text"] {
+     width: 100%;
+     padding: 12px;
+     margin-bottom: 15px;
+     border-radius: 10px;
+     border: 1px solid #6e8eff;
+     font-size: 14px;
+     background-color: transparent;
+ }
+
+
+ button {
+     background-color: #b26b09;
+     color: rgb(255, 255, 255);
+     padding: 12px 20px;
+     border: none;
+     border-radius: 10px;
+     font-size: 16px;
+     margin: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ button:hover {
+     background-color: #3a2901;
+ }
+
+ #scelta {
+     margin-top: 20px;
+ }
+
+ #risultati {
+     margin-top: 20px;
+     padding: 10px;
+     border-radius: 10px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     max-height: 300px;
+     overflow-y: auto;
+     width: 100%;
+     list-style: none;
+     padding: 0;
+     font-size: 12px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ }
+
+ #risultati li:hover {
+     cursor: pointer;
+ }
+
+ #risultati li {
+     background: linear-gradient(to right, rgb(143, 161, 252), rgb(255, 183, 0));
+     box-shadow: 0 2px 4px rgba(10, 18, 231, 0.1);
+     padding: 10px;
+     margin-bottom: 8px;
+     border-radius: 8px;
+ }

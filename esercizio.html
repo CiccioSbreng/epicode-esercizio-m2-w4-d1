@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca Lavori</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+
+    <div id="main">
+        <div id="topbar">
+            <img class="img" src="foto/logo.png" alt="">
+        </div>
+
+        <div id="content">
+            <h2>Trova un lavoro</h2>
+            <input type="text" id="inputLavoro" placeholder="Inserisci il titolo">
+            <input type="text" id="inputLuogo" placeholder="Inserisci la posizione">
+            <button onclick="avviaRicerca()">Cerca</button>
+            <button onclick="cancellaRicerca()">Cancella</button>
+            <div id="scelta">
+                <h3>Risultati:</h3>
+                <ul id="risultati"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="compito.js"></script>
+
+</body>
+
+</html>
