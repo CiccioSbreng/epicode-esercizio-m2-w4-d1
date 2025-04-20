@@ -85,13 +85,12 @@ const jobs = [
   },
 ]
 
-
 function cercaLavori(titolo, posizione) {
   titolo = titolo.toLowerCase()
   posizione = posizione.toLowerCase()
 
-  //console.log("Titolo convertito in minuscolo:", titolo);
-  //console.log("Posizione convertita in minuscolo:", posizione);
+  //  console.log("Titolo convertito in minuscolo:", titolo);
+  // console.log("Posizione convertita in minuscolo:", posizione);
 
   let lavoriTrovati = []; // Creato array vuoto per memorizzare i risultati
 
@@ -99,13 +98,14 @@ function cercaLavori(titolo, posizione) {
   for (let i = 0; i < jobs.length; i++) {
     let lavoro = jobs[i]
 
-    //console.log("Analizzando:", lavoro.title, "-", lavoro.location);
-   // console.log(jobs.length)
+    // console.log("Analizzando:", lavoro.title, "-", lavoro.location);
+    //  console.log(jobs.length)
 
     // Controlliamo se il titolo e la location contengono la parola cercata
     if (lavoro.title.toLowerCase().includes(titolo) &&
       lavoro.location.toLowerCase().includes(posizione)) {
       lavoriTrovati.push(lavoro); // Se corrisponde, lo aggiungiamo all'array dei risultati
+      // console.log("Aggiunto:", lavoro.title, "-", lavoro.location);
     }
   }
 
@@ -119,17 +119,25 @@ function avviaRicerca() {
   let titoloInserito = document.getElementById("inputLavoro").value
   let posizioneInserita = document.getElementById("inputLuogo").value
 
+  //console.log("Titolo inserito:", titoloInserito);
+  // console.log("Posizione inserita:", posizioneInserita);
+
   let risultatiRicerca = cercaLavori(titoloInserito, posizioneInserita)
 
   let listaRisultati = document.getElementById("risultati")
   listaRisultati.innerHTML = ""; // dobbiamo pulire la lista prima di aggiungere i nuovi risultati    
-              
 
-    for (let i = 0; i < risultatiRicerca.risultati.length; i++) {
-      let lavoro = risultatiRicerca.risultati[i]; // Prendiamo il lavoro corrente dall'array
-      let elementoLista = document.createElement("li"); // Creiamo un nuovo elemento lista
-      elementoLista.textContent = lavoro.title + " - " + lavoro.location; // Assegniamo il testo all'elemento
-      listaRisultati.appendChild(elementoLista); // Aggiungiamo l'elemento alla lista nel DOM
+  // console.log("Risultati trovati:", risultatiRicerca.totale);
+
+  for (let i = 0; i < risultatiRicerca.risultati.length; i++) {
+    let lavoro = risultatiRicerca.risultati[i]; // Prendiamo il lavoro corrente dall'array
+    let elementoLista = document.createElement("li"); // Creiamo un nuovo elemento lista
+    elementoLista.textContent = lavoro.title + " - " + lavoro.location; // Assegniamo il testo all'elemento
+    listaRisultati.appendChild(elementoLista); // Aggiungiamo l'elemento alla lista nel DOM
+
+
+    // console.log("Aggiunto alla lista:", lavoro.title, "-", lavoro.location);
+
   }
 
 
@@ -137,7 +145,9 @@ function avviaRicerca() {
 function cancellaRicerca() {
   document.getElementById("inputLavoro").value = ""; // Pulisci il campo  lavoro
   document.getElementById("inputLuogo").value = ""; // Pulisci il campo  posizione
-  document.getElementById("risultati").innerHTML =""; // Pulisci i risultati 
+  document.getElementById("risultati").innerHTML = ""; // Pulisci i risultati 
+
+  //console.log("Campi di ricerca e risultati cancellati.");
 
 
 
